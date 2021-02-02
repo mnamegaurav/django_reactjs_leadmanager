@@ -13,12 +13,11 @@ export class Leads extends Component {
 
     componentDidMount(){
         this.props.getLeads();
-        console.log('Hey')
     }
 
     render() {
         return (
-            <React.Fragment>
+            <div className="mt-4 card card-body">
                 <h2>Leads</h2>
                 <table className="table table-striped">
                     <thead>
@@ -50,7 +49,7 @@ export class Leads extends Component {
                         }
                     </tbody>
                 </table>
-            </React.Fragment>
+            </div>
         );
     }
 }

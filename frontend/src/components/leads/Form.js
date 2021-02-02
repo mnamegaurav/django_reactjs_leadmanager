@@ -23,10 +23,14 @@ export class Form extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        console.log("Submit")
         const { name, email, message } = this.state;
         const lead = { name, email, message };
         this.props.addLead(lead);
+        this.setState({
+            name: '',
+            email: '',
+            message: ''
+        })
     }
 
     render() {
@@ -57,13 +61,14 @@ export class Form extends Component {
                     </div>
                     <div className="form-group">
                         <label>Message</label>
-                        <input 
+                        <textarea
+                            cols="30"
                             type="text" 
                             className="form-control"
                             name="message"
                             onChange={this.onChange}
                             value={message}
-                        />
+                        ></textarea> 
                     </div>
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">
