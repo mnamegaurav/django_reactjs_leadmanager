@@ -85,9 +85,17 @@ WSGI_APPLICATION = 'leadmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd5bdm9utflpno4',
+        'USER': 'caulkldthuzabw',
+        'PASSWORD': '93c0f7be66e14aeb09ea334f92dd6281766664ab304ebc271881c1cf15def24b',
+        'HOST': 'ec2-34-254-69-72.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
