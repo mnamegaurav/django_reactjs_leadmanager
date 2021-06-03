@@ -16,7 +16,7 @@ export class Header extends Component {
         const { isAuthenticated, user } = this.props.auth;
 
         const authLinks = (
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <span className="navbar-text mr-3">
                         <strong>{ user && `Hi, ${user.username}` }</strong>
@@ -32,18 +32,18 @@ export class Header extends Component {
         )
 
         const guestLinks = (
-            <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                    <Link 
-                        to="/register" 
-                        className="nav-link"
-                    >Register</Link>
-                </li>
+            <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link 
                         to="/login" 
                         className="nav-link"
                     >Login</Link>
+                </li>
+                <li className="nav-item">
+                    <Link 
+                        to="/register" 
+                        className="nav-link"
+                    >Register</Link>
                 </li>
             </ul>
         )
@@ -53,8 +53,8 @@ export class Header extends Component {
                 className="navbar navbar-expand navbar-dark bg-dark"
             >
                 <div className="container">
-                    <a className="navbar-brand" href="/">Lead Manager</a>
                     { isAuthenticated ? authLinks : guestLinks }
+                    <a className="navbar-brand" href="/">Lead Manager App</a>
                 </div>
             </nav>
         );
